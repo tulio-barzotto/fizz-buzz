@@ -14,7 +14,7 @@ public class BuzzProcessor implements Chain {
     }
 
     public String process(int number) {
-        if(number % 5 == 0) {
+        if(number % 5 == 0 || String.valueOf(number).contains("5")) {
             return "Buzz";
         } else {
             return this.nextChain.process(number);

@@ -14,7 +14,7 @@ public class FizzProcessor implements Chain {
     }
 
     public String process(int number) {
-        if(number % 3 == 0) {
+        if(number % 3 == 0 || String.valueOf(number).contains("3")) {
             return "Fizz";
         } else {
             return this.nextChain.process(number);

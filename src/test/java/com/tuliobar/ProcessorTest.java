@@ -29,7 +29,7 @@ public class ProcessorTest {
 
     /**
      * Testando {@link BuzzProcessor} para que gere "Buzz" caso seja divisível
-     * por 5.
+     * por 5 ou contenha 5 no número
      */
     @Test
     public void testBuzzProcess() {
@@ -39,6 +39,10 @@ public class ProcessorTest {
         processed = chain.process(50);
         Assert.assertEquals(processed, BUZZ);
         processed = chain.process(100);
+        Assert.assertEquals(processed, BUZZ);
+        processed = chain.process(52);
+        Assert.assertEquals(processed, BUZZ);
+        processed = chain.process(56);
         Assert.assertEquals(processed, BUZZ);
     }
 
@@ -59,7 +63,7 @@ public class ProcessorTest {
 
     /**
      * Testando {@link FizzProcessor} para que gere "Fizz" caso seja divisível
-     * por 3
+     * por 3 ou contenha 3 no número
      */
     @Test
     public void testFizzProcess() {
@@ -69,6 +73,10 @@ public class ProcessorTest {
         processed = chain.process(54);
         Assert.assertEquals(processed, FIZZ);
         processed = chain.process(99);
+        Assert.assertEquals(processed, FIZZ);
+        processed = chain.process(13);
+        Assert.assertEquals(processed, FIZZ);
+        processed = chain.process(73);
         Assert.assertEquals(processed, FIZZ);
     }
 
