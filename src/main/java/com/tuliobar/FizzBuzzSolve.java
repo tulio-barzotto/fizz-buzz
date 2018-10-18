@@ -25,6 +25,9 @@ public class FizzBuzzSolve {
         if(finalNumber < initialNumber) {
             throw new IllegalArgumentException("O valor final deve ser superior ao inicial.");
         }
+        if(initialNumber == finalNumber) {
+            throw new IllegalArgumentException("Não é permitido que os valores sejam iguais.");
+        }
         this.initialNumber = initialNumber;
         this.finalNumber = finalNumber;
         chain = new FizzBuzzProcessor();
