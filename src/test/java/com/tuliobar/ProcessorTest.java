@@ -35,15 +35,15 @@ public class ProcessorTest {
     public void testBuzzProcess() {
         String processed;
         processed = chain.process(5);
-        Assert.assertEquals(processed, BUZZ);
+        Assert.assertEquals(BUZZ, processed);
         processed = chain.process(50);
-        Assert.assertEquals(processed, BUZZ);
+        Assert.assertEquals(BUZZ, processed);
         processed = chain.process(100);
-        Assert.assertEquals(processed, BUZZ);
+        Assert.assertEquals(BUZZ, processed);
         processed = chain.process(52);
-        Assert.assertEquals(processed, BUZZ);
+        Assert.assertEquals(BUZZ, processed);
         processed = chain.process(56);
-        Assert.assertEquals(processed, BUZZ);
+        Assert.assertEquals(BUZZ, processed);
     }
 
     /**
@@ -54,11 +54,11 @@ public class ProcessorTest {
     public void testDefaultProcess() {
         String processed;
         processed = chain.process(1);
-        Assert.assertEquals(processed, "1");
+        Assert.assertEquals("1", processed);
         processed = chain.process(47);
-        Assert.assertEquals(processed, "47");
+        Assert.assertEquals("47", processed);
         processed = chain.process(98);
-        Assert.assertEquals(processed, "98");
+        Assert.assertEquals("98", processed);
     }
 
     /**
@@ -69,15 +69,15 @@ public class ProcessorTest {
     public void testFizzProcess() {
         String processed;
         processed = chain.process(3);
-        Assert.assertEquals(processed, FIZZ);
+        Assert.assertEquals(FIZZ, processed);
         processed = chain.process(54);
-        Assert.assertEquals(processed, FIZZ);
+        Assert.assertEquals(FIZZ, processed);
         processed = chain.process(99);
-        Assert.assertEquals(processed, FIZZ);
+        Assert.assertEquals(FIZZ, processed);
         processed = chain.process(13);
-        Assert.assertEquals(processed, FIZZ);
+        Assert.assertEquals(FIZZ, processed);
         processed = chain.process(73);
-        Assert.assertEquals(processed, FIZZ);
+        Assert.assertEquals(FIZZ, processed);
     }
 
     /**
@@ -88,11 +88,11 @@ public class ProcessorTest {
     public void testFizzBuzzProcess() {
         String processed;
         processed = chain.process(15);
-        Assert.assertEquals(processed, FIZZBUZZ);
+        Assert.assertEquals(FIZZBUZZ, processed);
         processed = chain.process(45);
-        Assert.assertEquals(processed, FIZZBUZZ);
+        Assert.assertEquals(FIZZBUZZ, processed);
         processed = chain.process(90);
-        Assert.assertEquals(processed, FIZZBUZZ);
+        Assert.assertEquals(FIZZBUZZ, processed);
     }
 
 }
